@@ -60,6 +60,9 @@ Puppet::Type.newtype(:node_group) do
     validate do |value|
       fail("Classes must be supplied as a hash") unless value.is_a?(Hash)
     end
+    def insync?(is)
+      is == should
+    end
   end
 
   autorequire(:node_group) do
