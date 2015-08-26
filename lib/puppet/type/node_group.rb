@@ -1,5 +1,3 @@
-require 'pry'
-
 Puppet::Type.newtype(:node_group) do
 
   desc 'The node_group type creates and manages node groups for the PE Node Manager'
