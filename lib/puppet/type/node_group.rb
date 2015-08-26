@@ -47,7 +47,7 @@ Puppet::Type.newtype(:node_group) do
   newproperty(:rule, :array_matching => :all) do
     desc 'Match conditions for this group'
     validate do |value|
-      fail("Classes must be supplied as a hash") unless value.is_a?(Array)
+      fail("Rule must be supplied as an array") unless value.is_a?(Array)
     end
   end
 
